@@ -1,0 +1,50 @@
+# Laravel
+/vendor
+/node_modules
+/public/storage
+/.idea
+/.vscode
+/.phpunit.result.cache
+/.env
+/.env.local
+/.env.*.local
+Homestead.yaml
+Homestead.json
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+.phpunit.result.cache
+
+# Composer
+composer.lock
+
+# SQLite database
+/database/database.sqlite
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and cache
+/storage/*.key
+/storage/debugbar
+/storage/logs/*.log
+/storage/framework/cache/data/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/app/public/*
+
+# Optional: if you use IDEs
+*.sublime-workspace
+*.sublime-project
+*.idea/
+*.vscode/
+
+# Node & npm
+package-lock.json
+yarn.lock
+
+# Laravel Mix / Vite
+/public/mix-manifest.json
+/public/hot
+/public/build
