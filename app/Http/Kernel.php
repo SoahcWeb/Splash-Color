@@ -6,19 +6,30 @@ use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
 {
-    // Middleware de route minimal
+    /*
+    |--------------------------------------------------------------------------
+    | Middleware Groups
+    |--------------------------------------------------------------------------
+    */
+
     protected $middlewareGroups = [
         'web' => [
-            // session et CSRF sont utiles pour login
+            \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            // CSRF peut être ignoré si tu veux juste tester
-            // \App\Http\Middleware\VerifyCsrfToken::class,
+            \Illuminate\Foundation\Http\Middleware\VerifyCsrfToken::class,
+            \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
     ];
 
+    /*
+    |--------------------------------------------------------------------------
+    | Route Middleware
+    |--------------------------------------------------------------------------
+    */
+
     protected $routeMiddleware = [
-        'auth' => \App\Http\Middleware\Authenticate::class, // Breeze fournit ça
+        'auth' => \App\Http\Middleware\Authenticate::class,
         'admin' => \App\Http\Middleware\AdminMiddleware::class,
     ];
 }
