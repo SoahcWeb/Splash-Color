@@ -1,11 +1,11 @@
-🧠 Ton layout corrigé (complet)
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Splash COLOR</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <!-- On pointe maintenant vers style.css classique -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
     <header>
@@ -14,7 +14,7 @@
                 <li><a href="{{ route('home') }}">Accueil</a></li>
                 <li><a href="{{ route('about') }}">À propos</a></li>
                 <li><a href="{{ route('services') }}">Services</a></li>
-                <li><a href="{{ route('portfolio.index') }}">Portfolio</a></li> <!-- ✅ FIX -->
+                <li><a href="{{ route('portfolio.index') }}">Portfolio</a></li>
                 <li><a href="{{ route('contact') }}">Contact</a></li>
             </ul>
         </nav>
@@ -27,5 +27,8 @@
     <footer>
         <p>&copy; 2026 Splash COLOR</p>
     </footer>
+
+    <!-- 🔥 JS Animations -->
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
