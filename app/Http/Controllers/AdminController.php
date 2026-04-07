@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Routing\Controller; // <-- IMPORTANT
 
 class AdminController extends Controller
 {
     // On protège toutes les routes avec auth et admin middleware
     public function __construct()
     {
-        $this->middleware(['auth', 'admin']);
+        $this->middleware(['auth', 'admin']); // ✅ doit marcher
     }
 
     // Page dashboard
     public function index()
     {
-        return view('admin.dashboard');
+        return view('admin.dashboard'); // Assure-toi que ce fichier existe
     }
 }
